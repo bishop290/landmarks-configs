@@ -21,4 +21,4 @@ spring:
         - id: orders
           uri: lb://orders
           predicates:
-            - Path=/test1/**
+            - Path=/test1
