@@ -18,8 +18,7 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: orders-get
+        - id: orders
           uri: lb://orders
           predicates:
-            - Path=/test1
-              Method=GET
+            - Path=/test1/**
