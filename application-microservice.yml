@@ -11,3 +11,7 @@ eureka:
       defaultZone: http://${register.hostname}:${register.port}/eureka/
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
+
+spring:
+  config:
+    import: configserver:http://localhost:8888
