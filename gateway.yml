@@ -13,14 +13,13 @@ eureka:
 spring:
   cloud:
     gateway:
-      routes:
-        - id: orders
-          uri: lb://orders
-          predicates:
-            path: /test1
-            method: GET
-
       discovery:
         locator:
           enabled: true
           lower-case-service: true
+      routes:
+        - id: orders-get
+          uri: lb://orders
+          predicates:
+            - path: /test1
+              method: GET
