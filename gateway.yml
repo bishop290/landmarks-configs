@@ -16,7 +16,7 @@ spring:
       discovery:
         locator:
           enabled: true
-          lower-case-service: true
+          lower-case-service-id: true
       routes:
         - id: orders-get
           uri: lb://orders
