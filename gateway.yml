@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+register:
+  hostname: localhost
+  port: 8761
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${register.hostname}:${register.port}/eureka/
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: orders
+          uri: lb://orders
+
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service: true
