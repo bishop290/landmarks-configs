@@ -1,13 +1,10 @@
 server:
   port: 0
 
-register:
-  hostname: localhost
-  port: 8761
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${register.hostname}:${register.port}/eureka/
+      defaultZone: http://${REGISTER_HOST:localhost}:${REGISTER_PORT:8761}/eureka/
+
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
