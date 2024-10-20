@@ -18,4 +18,4 @@ spring:
           uri: lb://orders
           predicates:
             - Path=/orders/**
-            - Methods=GET,PUT,POST
+            - Method=GET,PUT,POST
