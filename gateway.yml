@@ -17,4 +17,4 @@ spring:
         - id: orders
           uri: lb://orders
           predicates:
-            - Path=/main/test/**
+            - Path=/orders/**
