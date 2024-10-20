@@ -17,5 +17,7 @@ spring:
         - id: orders
           uri: lb://orders
           predicates:
-            - Path=/orders/{segment}
+            - Path=/orders/**
             - Method=GET,POST,PUT
+          filters:
+            - RewritePath=/orders/(?<path>.*), /$\{path}
