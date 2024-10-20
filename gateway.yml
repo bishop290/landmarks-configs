@@ -17,5 +17,5 @@ spring:
         - id: orders
           uri: lb://orders
           predicates:
-            - Path=/orders
+            - Path=/orders/**
             - Method=GET,POST,PUT
