@@ -20,3 +20,6 @@ spring:
     enabled: true
     change-log: "classpath:db.changelog/changelog.sql"
     drop-first: true
+
+  kafka:
+    service: ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}

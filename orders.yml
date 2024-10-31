@@ -4,3 +4,14 @@ spring:
     username: "postgres"
     password: "postgres"
     driver-class-name: org.postgresql.Driver
+
+app:
+  kafka:
+    from-tickets-id: "from-tickets"
+    from-payments-id: "from-payments"
+
+    tickets-orders-topic: "tickets-to-orders"
+    payments-orders-topic: "payments-to-orders"
+
+    orders-tickets-topic: "orders-to-tickets"
+    orders-payments-topic: "orders-to-payments"
