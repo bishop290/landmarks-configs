@@ -18,3 +18,11 @@ spring:
           uri: lb://orders
           predicates:
             - Path=/orders/**
+        - id: payments
+          uri: lb://payments
+          predicates:
+            - Path=/payments/**
+        - id: tickets
+          uri: lb://tickets
+          predicates:
+            - Path=/tickets/**
